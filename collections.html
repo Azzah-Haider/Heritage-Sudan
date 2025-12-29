@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Galleries & Collections - Sudan's Cultural Heritage</title>
+    <!-- For icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+    <div class="container">
+        <a class="navbar-brand text-dark" href="home.html">
+            <i class="bi bi-columns-gap"></i> Heritage Sudan
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="home.html"><i class="bi bi-house-door me-1"></i> Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="museums.html"><i class="fas fa-landmark"></i> Museums</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link active" href="collections.html"><i class="fas fa-layer-group"></i> Collections</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="history.html"><i class="fas fa-scroll me-1"></i> History</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="visit.html"><i class="fas fa-ticket-alt"></i> Visit</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link btn btn-heritage rounded-pill px-4 text-white" href="contact.html">
+                        <i class="fas fa-envelope me-1" style="color: #ccc;"></i>Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="hero py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="display-4 fw-bold mb-3">Art Galleries & Cultural Collections</h1>
+                <p class="lead mb-4">Explore Sudan's vibrant contemporary art scene and cultural spaces</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Collections Section -->
+<section class="container my-5">
+    <h2 class="text-center mb-5">Art Galleries & Cultural Collections</h2>
+    <div class="row g-4">
+
+        <!-- MOJO -->
+        <div class="col-md-4">
+            <div class="card h-100 gallery-card">
+                <img src="/images/Mojo Gallery.jpg" class="card-img-top" alt="Mojo Gallery">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Mojo Gallery</h5>
+                    <p class="card-text">Contemporary Sudanese art space.</p>
+                    <div class="mt-auto">
+                        <button class="btn btn-view-details" data-bs-toggle="modal" data-bs-target="#mojoModal">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ART DIWAN -->
+        <div class="col-md-4">
+            <div class="card h-100 gallery-card">
+                <img src="/images/Sudan Art Diwan.jpg" class="card-img-top" alt="Sudan Art Diwan">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Sudan Art Diwan</h5>
+                    <p class="card-text">Platform for Sudanese visual artists.</p>
+                    <div class="mt-auto">
+                        <button class="btn btn-view-details" data-bs-toggle="modal" data-bs-target="#diwanModal">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DARA -->
+        <div class="col-md-4">
+            <div class="card h-100 gallery-card">
+                <img src="/images/Dara Art Gallery.jpg" class="card-img-top" alt="Dara Art Gallery">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Dara Art Gallery</h5>
+                    <p class="card-text">Founded by Rashid Diab in 1999.</p>
+                    <div class="mt-auto">
+                        <button class="btn btn-view-details" data-bs-toggle="modal" data-bs-target="#daraModal">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- REMENAR -->
+        <div class="col-md-4">
+            <div class="card h-100 gallery-card">
+                <img src="/images/Remenar Gallery.jpg" class="card-img-top" alt="Remenar Gallery">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Remenar Gallery</h5>
+                    <p class="card-text">Artworks, handicrafts and antiques.</p>
+                    <div class="mt-auto">
+                        <button class="btn btn-view-details" data-bs-toggle="modal" data-bs-target="#remenarModal">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DOWNTOWN -->
+        <div class="col-md-4">
+            <div class="card h-100 gallery-card">
+                <img src="/images/Downtown Gallery.jpg" class="card-img-top" alt="The Downtown Gallery">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">The Downtown Gallery</h5>
+                    <p class="card-text">Underground creative art space.</p>
+                    <div class="mt-auto">
+                        <button class="btn btn-view-details" data-bs-toggle="modal" data-bs-target="#downtownModal">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= GALLERY MODALS ================= -->
+
+<!-- Mojo Gallery Modal -->
+<div class="modal fade" id="mojoModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Mojo Gallery</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+
+                <div id="mojoCarousel" class="carousel slide mb-4">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active"></div>
+                        <div class="carousel-item"><img src="/images/Mogo 2.jpg" class="d-block w-100 modal-img" alt="Mogo 2"></div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-target="#mojoCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-target="#mojoCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+
+                <p>Mojo Gallery serves as a vibrant hub for Sudanese art enthusiasts. Established in 2010, it aims to showcase and sell works that reflect Sudan's rich cultural tapestry.</p>
+                <p>Founded to elevate Sudanese art, the gallery features exhibitions that highlight various visual styles influenced by both African and Arab cultures. The architecture is simple yet functional, enhancing the presentation of artworks without distraction.</p>
+
+                <ul>
+                    <li><strong>Established:</strong> 2010</li>
+                    <li><strong>Mission:</strong> Showcase and sell Sudanese art</li>
+                    <li><strong>Focus:</strong> Contemporary Sudanese art</li>
+                    <li><strong>Architecture:</strong> Simple, functional design</li>
+                    <li><strong>Cultural Influence:</strong> African and Arab visual styles</li>
+                    <li><strong>Role:</strong> Cultural hub for art enthusiasts</li>
+                </ul>
+
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.google.com/maps?q=Mojo+Gallery+Khartoum&output=embed" allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sudan Art Diwan Modal -->
+<div class="modal fade" id="diwanModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Sudan Art Diwan</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+
+                <div id="diwanCarousel" class="carousel slide mb-4">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active"></div>
+                        <div class="carousel-item"><img src="/images/Art Diwan 2.jpg" class="d-block w-100 modal-img" alt="Art Diwan 2.jpg"></div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-target="#diwanCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-target="#diwanCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+
+                <p>Sudan Art Diwan offers an immersive experience into the dynamic world of Sudanese art, featuring monoprints, etchings, and miniatures. This gallery showcases the vitality of Sudanese aesthetics on an international level.</p>
+                <p>Founded with the aim to promote local artists, Sudan Art Diwan serves as a cultural hub in Khartoum. It highlights diverse artistic expressions and provides a space for dialogue between creators and the community. The architectural design reflects traditional Sudanese elements adorned with modern touches.</p>
+
+                <ul>
+                    <li><strong>Art Forms:</strong> Monoprints, etchings, miniatures</li>
+                    <li><strong>Mission:</strong> Promote local Sudanese artists</li>
+                    <li><strong>Role:</strong> Cultural hub in Khartoum</li>
+                    <li><strong>Architecture:</strong> Traditional Sudanese elements with modern touches</li>
+                    <li><strong>Focus:</strong> Diverse artistic expressions</li>
+                    <li><strong>Community Role:</strong> Space for dialogue between artists and community</li>
+                    <li><strong>International Reach:</strong> Showcases Sudanese aesthetics globally</li>
+                </ul>
+
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.google.com/maps?q=Sudan+Art+Diwan+Khartoum&output=embed" allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Dara Art Gallery Modal -->
+<div class="modal fade" id="daraModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Dara Art Gallery</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+
+                <div id="daraCarousel" class="carousel slide mb-4">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active"></div>
+                        <div class="carousel-item"><img src="/images/dara art gallery 2.webp" class="d-block w-100 modal-img" alt="dara art gallery 2.webp"></div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-target="#daraCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-target="#daraCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+
+                <p>Dara Art Gallery is a Sudanese art gallery founded in late 1999 by the artists Rashid Diab and Mercedes Carmona at their house in Khartoum. They envisioned the creation of a space where artists from Sudan could exhibit their work in a professional manner.</p>
+                <p>Since its opening it has been host to many of the great Sudanese artists including Ibrahim Al-Salahi, Yassir Abu-El-Haram, Hussein Gamaan, Ahmad Mohamad Shibrain and many more. Of course over the years Rashid Diab and Mercedes Carmona have also had their work displayed in the gallery.</p>
+                <p>In 2005 Rashid Diab opened the Rashid Diab Arts Centre. That space was then designated to furthering the opportunities for Sudanese artists that Dara Art Gallery once offered. Since 2005 the gallery has been exclusively Rashid Diab's private gallery and has been exhibiting his work from the 80s all the way till the present day.</p>
+                <p>As of 2020 the gallery has come under new management, and the works of more artists have been added. Furthermore, during the recent pandemic there has been a re-cataloguing, archiving and restoring of Rashid Diab's work. Unfortunately, as of 2023 the war in Sudan has seen the capital Khartoum completely pillaged and the gallery has embarked on a nomadic journey. We are now limited to international art fairs and other international curatorial projects.</p>
+
+                <ul>
+                    <li><strong>Founded:</strong> Late 1999</li>
+                    <li><strong>Founders:</strong> Rashid Diab and Mercedes Carmona</li>
+                    <li><strong>Original Location:</strong> Founders' house in Khartoum</li>
+                    <li><strong>Featured Artists:</strong> Ibrahim Al-Salahi, Yassir Abu-El-Haram, Hussein Gamaan, Ahmad Mohamad Shibrain</li>
+                    <li><strong>2005:</strong> Rashid Diab opens Rashid Diab Arts Centre</li>
+                    <li><strong>Post-2005:</strong> Became Rashid Diab's private gallery</li>
+                    <li><strong>2020:</strong> New management, more artists added</li>
+                    <li><strong>Current Status:</strong> Nomadic due to war in Sudan, participating in international art fairs</li>
+                    <li><strong>Special Projects:</strong> Re-cataloguing and restoration of Rashid Diab's work</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Remenar Gallery Modal -->
+<div class="modal fade" id="remenarModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Remenar Gallery</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+
+                <div id="remenarCarousel" class="carousel slide mb-4">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active"></div>
+                        <div class="carousel-item"><img src="/images/Remenar Gallery 2.jpg" class="d-block w-100 modal-img" alt="Remenar Gallery 2.jpg"></div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-target="#remenarCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-target="#remenarCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+
+                <p>Remenar Gallery is contemporary and visual art gallery in Sudan where you can view and shop for original paintings as well as art pieces of heritage, various handicrafts, and antiques and accessories.</p>
+
+                <ul>
+                    <li><strong>Type:</strong> Contemporary and visual art gallery</li>
+                    <li><strong>Products:</strong> Original paintings, heritage art pieces, handicrafts, antiques, accessories</li>
+                    <li><strong>Hours:</strong> Daily 8:30 AM – 4:30 PM</li>
+                    <li><strong>Closed:</strong> Fridays</li>
+                    <li><strong>Services:</strong> Viewing and shopping for art</li>
+                    <li><strong>Collection:</strong> Mix of contemporary art and traditional heritage pieces</li>
+                </ul>
+
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.google.com/maps?q=Remenar+Gallery+Khartoum&output=embed" allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Downtown Gallery Modal -->
+<div class="modal fade" id="downtownModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">The Downtown Gallery</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+
+                <div id="downtownCarousel" class="carousel slide mb-4">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active"></div>
+                        <div class="carousel-item"><img src="/images/The Downtown Gallery.jpg" class="d-block w-100 modal-img" alt="The Downtown Gallery.jpg"></div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-target="#downtownCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-target="#downtownCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+
+                <p>Also known as "The Hidden Gem Of Alsoog Alarabi" and Sudan's underground art gallery, The Downtown Gallery is Sol Creatives and Downtown Hotel & Business Center's joint project to transform the concept of art curation in Sudan. With a wall that fits up to 18 pieces of artwork and an art store attached, this small space is designed to make the visitor live the experience.</p>
+
+                <ul>
+                    <li><strong>Also Known As:</strong> "The Hidden Gem Of Alsoog Alarabi", Sudan's underground art gallery</li>
+                    <li><strong>Partnership:</strong> Sol Creatives and Downtown Hotel & Business Center</li>
+                    <li><strong>Mission:</strong> Transform art curation concept in Sudan</li>
+                    <li><strong>Location:</strong> Khartoum 2</li>
+                    <li><strong>Hours:</strong> 9 AM – 7 PM</li>
+                    <li><strong>Capacity:</strong> Wall fits up to 18 artwork pieces</li>
+                    <li><strong>Features:</strong> Art store attached, immersive experience</li>
+                    <li><strong>Concept:</strong> Small space designed for visitor experience</li>
+                </ul>
+
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.google.com/maps?q=The+Downtown+Gallery+Khartoum+2&output=embed" allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5 style="color:#ccc">Heritage Sudan</h5>
+                <p class="mb-0">Preserving and promoting Sudan's rich cultural heritage.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0">&copy; 2025 Heritage Sudan. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                <a href="#" class="text-white text-decoration-none">Terms of Use</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

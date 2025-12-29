@@ -1,0 +1,960 @@
+:root {
+    --primary-color: #8B4513;
+    --secondary-color: #D2691E;
+    --accent-color: #CD853F;
+    --dark-color: #2C1810;
+    --light-color: #F5F5DC;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-color);
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.hero-minimal {
+    background: linear-gradient(135deg, rgba(44, 24, 16, 0.8) 0%, rgba(139, 69, 19, 0.7) 100%),
+                url('https://via.placeholder.com/1920x800') center/cover no-repeat;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero {
+    background: linear-gradient(135deg, rgba(44, 24, 16, 0.8) 0%, rgba(139, 69, 19, 0.7) 100%),
+                url('https://via.placeholder.com/1920x800') center/cover no-repeat;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-m {
+    background: linear-gradient(135deg, rgba(44, 24, 16, 0.8) 0%, rgba(139, 69, 19, 0.7) 100%),
+                url('https://via.placeholder.com/1920x800') center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.museum-card-minimal {
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.museum-card-minimal:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.museum-card-minimal .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.museum-card-minimal:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.artifact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.artifact-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 300px;
+}
+
+.artifact-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.artifact-item:hover img {
+    transform: scale(1.1);
+}
+
+.artifact-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.artifact-item:hover .artifact-overlay {
+    transform: translateY(0);
+}
+
+.timeline-modern {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline-modern::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item-modern {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    transform: translateY(50px);
+     animation: fadeInUp 0.6s forwards;
+}
+
+.timeline-item-modern::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: white;
+    border: 4px solid var(--primary-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item-modern.left {
+    left: 0;
+}
+
+.timeline-item-modern.right {
+    left: 50%;
+}
+
+.timeline-item-modern.right::after {
+    left: -13px;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color:var(--light-color);;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e0d6c9;
+}
+
+ /* Improve timeline card typography - Keep original sizes but with new colors */
+.timeline-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h5 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.timeline-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.timeline-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Keep the accent line under the year */
+.timeline-content h4 {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.timeline-content h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+/* Initial state - hidden */
+.timeline-item-modern {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Animated state - visible */
+.timeline-item-modern.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger effect - each item delays slightly */
+.timeline-item-modern:nth-child(1).animate-in { transition-delay: 0.1s; }
+.timeline-item-modern:nth-child(2).animate-in { transition-delay: 0.2s; }
+.timeline-item-modern:nth-child(3).animate-in { transition-delay: 0.3s; }
+.timeline-item-modern:nth-child(4).animate-in { transition-delay: 0.4s; }
+.timeline-item-modern:nth-child(5).animate-in { transition-delay: 0.5s; }
+.timeline-item-modern:nth-child(6).animate-in { transition-delay: 0.6s; }
+
+/* Hover pulse animation for circle markers */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(52, 152, 219, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+    }
+}
+
+.timeline-item-modern:hover::after {
+    transform: scale(1.3);
+    animation: pulse 1.5s infinite;
+}
+
+/* Card hover effect */
+.timeline-content {
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.visit-info {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 4rem 0;
+}
+
+.info-card {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.info-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.btn-heritage {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-heritage:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Additional styles for text colors */
+.text-accent {
+    color: var(--accent-color);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .timeline-modern::after {
+        left: 31px;
+    }
+
+    .timeline-item-modern {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item-modern::after {
+        left: 18px;
+    }
+
+    .timeline-item-modern.right {
+        left: 0%;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Active navigation link */
+.nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: 500;
+}
+ /* contact section */
+   * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+         }
+
+         body {
+             font-family: 'Georgia', serif;
+             background-color: #f5f5f5;
+             color: #333;
+         }
+
+         /* Hero Section - matching museum style */
+         .hero-section {
+             background: linear-gradient(135deg, rgba(44, 24, 16, 0.8) 0%, rgba(139, 69, 19, 0.7) 100%),
+                             url('https://via.placeholder.com/1920x800') center/cover no-repeat;
+             color: white;
+             padding: 60px 20px;
+             text-align: center;
+         }
+
+         .hero-section h1 {
+             font-size: 3em;
+             margin-bottom: 10px;
+             font-weight: 300;
+         }
+
+         .hero-section h1::after {
+             content: '';
+             display: block;
+             width: 80px;
+             height: 3px;
+             background-color: #d4792c;
+             margin: 20px auto;
+         }
+
+         .subtitle {
+             font-size: 1.1em;
+             color: #ccc;
+             max-width: 700px;
+             margin: 0 auto;
+             line-height: 1.6;
+         }
+
+         /* Content Wrapper */
+         .content-wrapper {
+             max-width: 1200px;
+             margin: 0 auto;
+             padding: 40px 20px;
+         }
+
+         /* Info Section */
+         .info-section {
+             margin-bottom: 60px;
+         }
+
+         .info-section h2 {
+             font-size: 2.5em;
+             color: #3d2817;
+             margin-bottom: 10px;
+             font-weight: 300;
+             text-align: center;
+         }
+
+         .info-section h2::after {
+             content: '';
+             display: block;
+             width: 60px;
+             height: 3px;
+             background-color: #d4792c;
+             margin: 15px auto 30px;
+         }
+
+         .description {
+             text-align: center;
+             color: #555;
+             font-size: 1.1em;
+             line-height: 1.8;
+             max-width: 800px;
+             margin: 0 auto 50px;
+         }
+
+         /* Contact Grid */
+         .contact-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+             gap: 30px;
+             margin-bottom: 40px;
+         }
+
+         .contact-card {
+             background-color: white;
+             padding: 30px;
+             border-radius: 10px;
+             box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+             text-align: center;
+             transition: transform 0.3s, box-shadow 0.3s;
+         }
+
+         .contact-card:hover {
+             transform: translateY(-5px);
+             box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+         }
+
+         .contact-icon {
+             width: 60px;
+             height: 60px;
+             margin: 0 auto 20px;
+             border: 3px solid #d4792c;
+             border-radius: 50%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: 30px;
+         }
+
+         .contact-card h3 {
+             font-size: 1.3em;
+             color: #3d2817;
+             margin-bottom: 15px;
+             font-weight: 400;
+         }
+
+         .contact-card p {
+             color: #666;
+             line-height: 1.8;
+             font-size: 0.95em;
+         }
+
+         /* Form Section */
+         .form-section {
+             background-color: white;
+             max-width: 800px;
+             margin: 0 auto;
+             padding: 50px 40px;
+             border-radius: 10px;
+             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+         }
+
+         .form-section h2 {
+             text-align: center;
+             color: #3d2817;
+             font-size: 2.5em;
+             margin-bottom: 10px;
+             font-weight: 300;
+         }
+
+         .form-section h2::after {
+             content: '';
+             display: block;
+             width: 60px;
+             height: 3px;
+             background-color: #d4792c;
+             margin: 15px auto 40px;
+         }
+
+         .form-group {
+             margin-bottom: 25px;
+         }
+
+         label {
+             display: block;
+             margin-bottom: 8px;
+             color: #3d2817;
+             font-weight: 600;
+             font-size: 0.95em;
+         }
+
+         input, textarea {
+             width: 100%;
+             padding: 12px 15px;
+             border: 2px solid #e0e0e0;
+             border-radius: 5px;
+             font-size: 1em;
+             font-family: inherit;
+             transition: border-color 0.3s;
+         }
+
+         input:focus, textarea:focus {
+             outline: none;
+             border-color: #d4792c;
+         }
+
+         textarea {
+             resize: vertical;
+             min-height: 150px;
+         }
+
+         .submit-btn {
+             background-color: #d4792c;
+             color: white;
+             padding: 15px 40px;
+             border: none;
+             border-radius: 5px;
+             font-size: 1.1em;
+             cursor: pointer;
+             width: 100%;
+             transition: background-color 0.3s;
+             font-weight: 600;
+         }
+
+         .submit-btn:hover {
+             background-color: #b86523;
+         }
+
+         /* Responsive Design */
+         @media (max-width: 768px) {
+             .hero-section h1 {
+                 font-size: 2em;
+             }
+
+             .info-section h2,
+             .form-section h2 {
+                 font-size: 2em;
+             }
+
+             .contact-grid {
+                 grid-template-columns: 1fr;
+             }
+
+             .form-section {
+                 padding: 30px 20px;
+                 margin: 20px;
+             }
+
+             .content-wrapper {
+                 padding: 20px 10px;
+             }
+         }
+
+         /* visit section */
+
+           * {
+                     margin: 0;
+                     padding: 0;
+                     box-sizing: border-box;
+                 }
+
+                 body {
+                     font-family: 'Georgia', serif;
+                     background-color: #f5f5f5;
+                 }
+
+                 .hero-section {
+                     background-color: #3d2817;
+                     color: white;
+                     padding: 60px 20px;
+                     text-align: center;
+                 }
+
+                 .hero-section h1 {
+                     font-size: 3em;
+                     margin-bottom: 10px;
+                     font-weight: 300;
+                 }
+
+                 .hero-section h1::after {
+                     content: '';
+                     display: block;
+                     width: 80px;
+                     height: 3px;
+                     background-color: #d4792c;
+                     margin: 20px auto;
+                 }
+
+                 .info-container {
+                     display: flex;
+                     justify-content: space-around;
+                     align-items: flex-start;
+                     flex-wrap: wrap;
+                     max-width: 1200px;
+                     margin: 0 auto;
+                     padding: 40px 20px;
+                 }
+
+                 .info-box {
+                     text-align: center;
+                     flex: 1;
+                     min-width: 250px;
+                     margin: 20px;
+                 }
+
+                 .icon {
+                     width: 60px;
+                     height: 60px;
+                     margin: 0 auto 20px;
+                     border: 3px solid #d4792c;
+                     border-radius: 50%;
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+                     font-size: 30px;
+                     color: #d4792c;
+                 }
+
+                 .info-box h3 {
+                     font-size: 1.2em;
+                     margin-bottom: 10px;
+                     color: white;
+                 }
+
+                 .info-box p {
+                     color: #ccc;
+                     line-height: 1.6;
+                 }
+
+                 /* Booking Form Styles */
+                 .booking-section {
+                     background-color: white;
+                     max-width: 800px;
+                     margin: 40px auto;
+                     padding: 50px 40px;
+                     border-radius: 10px;
+                     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+                 }
+
+                 .booking-section h2 {
+                     text-align: center;
+                     color: #3d2817;
+                     font-size: 2.5em;
+                     margin-bottom: 10px;
+                     font-weight: 300;
+                 }
+
+                 .booking-section h2::after {
+                     content: '';
+                     display: block;
+                     width: 60px;
+                     height: 3px;
+                     background-color: #d4792c;
+                     margin: 15px auto 40px;
+                 }
+
+                 .form-group {
+                     margin-bottom: 25px;
+                 }
+
+                 .form-row {
+                     display: flex;
+                     gap: 20px;
+                 }
+
+                 .form-row .form-group {
+                     flex: 1;
+                 }
+
+                 label {
+                     display: block;
+                     margin-bottom: 8px;
+                     color: #3d2817;
+                     font-weight: 600;
+                     font-size: 0.95em;
+                 }
+
+                 input, select, textarea {
+                     width: 100%;
+                     padding: 12px 15px;
+                     border: 2px solid #e0e0e0;
+                     border-radius: 5px;
+                     font-size: 1em;
+                     font-family: inherit;
+                     transition: border-color 0.3s;
+                 }
+
+                 input:focus, select:focus, textarea:focus {
+                     outline: none;
+                     border-color: #d4792c;
+                 }
+
+                 textarea {
+                     resize: vertical;
+                     min-height: 100px;
+                 }
+
+                 .submit-btn {
+                     background-color: #d4792c;
+                     color: white;
+                     padding: 15px 40px;
+                     border: none;
+                     border-radius: 5px;
+                     font-size: 1.1em;
+                     cursor: pointer;
+                     width: 100%;
+                     transition: background-color 0.3s;
+                     font-weight: 600;
+                 }
+
+                 .submit-btn:hover {
+                     background-color: #b86523;
+                 }
+
+                 @media (max-width: 768px) {
+                     .form-row {
+                         flex-direction: column;
+                         gap: 0;
+                     }
+
+                     .booking-section {
+                         padding: 30px 20px;
+                         margin: 20px;
+                     }
+
+                     .hero-section h1 {
+                         font-size: 2em;
+                     }
+
+                     .booking-section h2 {
+                         font-size: 2em;
+                     }
+                 }
+                 /* muesum section */
+                 .card-img-top {
+                         height: 200px;
+                         object-fit: cover;
+                     }
+                     .modal-img {
+                         max-height: 400px;
+                         object-fit: cover;
+                     }
+                   /* gallery section */
+                    .card-img-top {
+                           height: 200px;
+                           object-fit: cover;
+                       }
+                       .modal-img {
+                           max-height: 400px;
+                           object-fit: cover;
+                       }
+
+                       /* css styles for icons */
+
+                       /* تأثير دوران خفيف عند Hover */
+                      /* css/style.css */
+
+                      /* جميع الأيقونات بلون بني واحد */
+                      .nav-link i {
+                          color: #8b4513; /* بني تراثي */
+                          transition: transform 0.3s ease;
+                          display: inline-block;
+                      }
+
+                      /* تأثير عند التمرير */
+                      .nav-link:hover i {
+                          transform: scale(1.2);
+                          color: #a0522d; /* بني أفتح قليلاً */
+                      }
+
+                      /* الأيقونة النشطة */
+                      .nav-link.active i {
+                          color: #654321; /* بني داكن */
+                      }
+
+                       /* ألوان مختلفة لكل أيقونة */
+                       .nav-link:nth-child(1) i { color: #8b4513; }
+                       .nav-link:nth-child(2) i { color: #8b4513;  }
+                       .nav-link:nth-child(3) i { color: #8b4513; }
+                       .nav-link:nth-child(4) i { color: #8b4513; }
+                       .nav-link:nth-child(5) i { color: #8b4513; }
+
+/* ================= MUSEUM & GALLERY CARDS ================= */
+
+/* Card Styling - using your color variables */
+.museum-card, .gallery-card {
+    background-color: var(--light-color); /* Using your light-color variable #F5F5DC */
+    border: 1px solid #e0d6c9;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.museum-card:hover, .gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(139, 69, 19, 0.15);
+}
+
+.museum-card .card-img-top, .gallery-card .card-img-top {
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #e0d6c9;
+}
+
+.museum-card .card-body, .gallery-card .card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.museum-card .card-title, .gallery-card .card-title {
+    color: var(--dark-color); /* Using your dark-color variable #2C1810 */
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.museum-card .card-text, .gallery-card .card-text {
+    color: #6c757d;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* View Details Button - using your color variables */
+.btn-view-details {
+    background-color: var(--primary-color); /* #8B4513 */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.btn-view-details:hover {
+    background-color: var(--secondary-color); /* #D2691E */
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+}
+
+/* Modal Styling */
+.modal-content {
+    background-color: var(--light-color); /* #F5F5DC */
+    border-radius: 10px;
+    border: 1px solid #e0d6c9;
+}
+
+.modal-header {
+    background-color: var(--primary-color); /* #8B4513 */
+    color: white;
+    border-bottom: 1px solid var(--secondary-color); /* #D2691E */
+    border-radius: 10px 10px 0 0;
+    padding: 1rem 1.5rem;
+}
+
+.modal-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.btn-close {
+    filter: invert(1) brightness(2);
+    opacity: 0.8;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    color: #333;
+}
+
+.modal-body ul {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.modal-body li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Card layout improvements */
+.card-body.d-flex.flex-column {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.mt-auto {
+    margin-top: auto !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .museum-card .card-img-top,
+    .gallery-card .card-img-top {
+        height: 180px;
+    }
+
+    .btn-view-details {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Did You Know Section */
+.did-you-know {
+    background-color: var(--light-color);
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.did-you-know:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.1) !important;
+}
+
+#fact-text {
+    transition: opacity 0.3s ease;
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+}
