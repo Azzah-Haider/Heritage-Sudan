@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Heritage Sudan - Museums & Cultural Sites</title>
+    <!-- For icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+    <div class="container">
+        <a class="navbar-brand text-dark" href="#">
+            <i class="bi bi-columns-gap"></i> Heritage Sudan
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item mx-2">
+                    <a class="nav-link active" href="home.html"><i class="bi bi-house-door me-1"></i> Home </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="museums.html"><i class="fas fa-landmark"></i> Museums </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="collections.html"><i class="fas fa-layer-group"></i> Collections </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="history.html"><i class="fas fa-scroll me-1"></i> History </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="visit.html"><i class="fas fa-ticket-alt"></i>  Visit </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link btn btn-heritage rounded-pill px-4 text-white" href="contact.html"> <i class="fas fa-envelope me-1" style="color: #ccc;"></i>Contact </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-minimal">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1 class="display-3 fw-bold mb-4">Sudan's Cultural Legacy</h1>
+                <p class="lead mb-4">Exploring the ancient kingdoms and artifacts that shaped Nubian civilization across millennia.</p>
+
+                <a href="collections.html"  class="btn btn-heritage btn-lg rounded-pill px-5">Explore Collections</a>
+                <a href="museums.html"  class="btn btn-heritage btn-lg rounded-pill px-5">Discover Museums</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= DID YOU KNOW PANEL ================= -->
+<section class="container my-5">
+    <div class="did-you-know shadow-sm p-4 rounded">
+        <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-lightbulb-fill me-2 text-warning fs-4"></i>
+            <h5 class="mb-0" style="color: #8B4513;">Did You Know?</h5>
+        </div>
+        <p id="fact-text" class="mb-0 fs-5">
+            Sudan has more pyramids than any other country in the world.
+        </p>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5 style="color:#ccc">Heritage Sudan</h5>
+                <p class="mb-0">Preserving and promoting Sudan's rich cultural heritage.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0">&copy; 2025 Heritage Sudan. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                <a href="#" class="text-white text-decoration-none">Terms of Use</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JavaScript -->
+<script src="../js/main.js"></script>
+
+<!-- Did you know js-->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const facts = [
+            "Sudan has more pyramids than any other country in the world.",
+            "The Kingdom of Kush ruled Egypt as the 25th Dynasty.",
+            "Ancient Nubia was one of Africa's earliest civilizations.",
+            "The city of Meroë was a major center for iron production in antiquity.",
+            "Sudan is home to temples relocated during the Aswan Dam rescue project.",
+            "The Nile River meets at Khartoum, where the Blue and White Niles converge.",
+            "Kerma was one of the earliest urban centers in the Nile Valley.",
+            "Sudanese railways were once among the most advanced in Africa.",
+            "Traditional Sudanese architecture adapts to desert and river climates.",
+            "Sudan's cultural heritage reflects African, Arab, and Nubian influences."
+        ];
+
+        let currentIndex = 0;
+        const factElement = document.getElementById('fact-text');
+
+        if (factElement) {
+            // Change fact every 3 seconds
+            setInterval(function() {
+                currentIndex = (currentIndex + 1) % facts.length;
+                factElement.style.opacity = 0;
+
+                setTimeout(function() {
+                    factElement.textContent = facts[currentIndex];
+                    factElement.style.opacity = 1;
+                }, 300);
+            }, 5000);
+        }
+    });
+</script>
+
+</body>
+</html>
